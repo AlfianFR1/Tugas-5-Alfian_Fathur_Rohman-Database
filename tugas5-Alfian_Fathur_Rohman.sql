@@ -57,7 +57,9 @@ SELECT * FROM category;
 
 ------------Soal 4---------------
 --update id buku = 1--
-UPDATE books SET judul_buku="Building Microservices: Designing FineGrained Systems 1st", tahun_terbit=2015, tanggal_diupdate="2023-09-20" WHERE id_buku=1;
+UPDATE books SET judul_buku=
+"Building Microservices: Designing FineGrained Systems 1st", tahun_terbit=2015, tanggal_diupdate="2023-09-20" 
+WHERE id_buku=1;
 
 ------------Soal 6--------------
 --menghapus id data 10 pada tabel books dan category--
@@ -85,7 +87,9 @@ VALUES
 
 ----------Soal 9------------
 --menampilkan data books dan category yang terdapat relasi yang di tampilkan di tabel book_categories--
-SELECT books.id_buku, books.judul_buku, category.nama_category FROM books, category, book_categories WHERE books.id_buku=book_categories.id_book AND category.id_category=book_categories.id_category;
+SELECT books.id_buku, books.judul_buku, category.nama_category 
+FROM books, category, book_categories 
+WHERE books.id_buku=book_categories.id_book AND category.id_category=book_categories.id_category AND id_buku=1;
 
 ----------Soal 10-----------
 --Menambah kolom jumlah halaman--
